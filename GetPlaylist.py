@@ -12,8 +12,15 @@ class GetPlaylist(object):
         browser = webdriver.Firefox()
         browser.get('http://www.billboard.com/charts/rock-songs')
         time.sleep(5)
+        while x<10
         title = browser.find_element_by_xpath('.//div[1]/div[4]/h2').text
+        artista = browser.find_element_by_xpath('.//div[1]/div[4]/h3/a').text
+
+
+
         print title
+        print artista
+
 
 myClassObject = GetPlaylist()
 myClassObject.getTopSongs()
