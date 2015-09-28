@@ -12,14 +12,17 @@ class GetPlaylist(object):
         browser = webdriver.Firefox()
         browser.get('http://www.billboard.com/charts/rock-songs')
         time.sleep(5)
-        while x<10
-        title = browser.find_element_by_xpath('.//div[1]/div[4]/h2').text
-        artista = browser.find_element_by_xpath('.//div[1]/div[4]/h3/a').text
+
+        x=0
+        while (x<5):
+            title = browser.find_element_by_xpath('.//raw[1]/div[1]/div[4]/h2').text
+            artista = browser.find_element_by_xpath('.//raw[1]/div[1]/div[4]/h3/a').text
+            print title
+            print artista
+            x=x+1
 
 
 
-        print title
-        print artista
 
 
 myClassObject = GetPlaylist()
