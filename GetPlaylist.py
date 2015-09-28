@@ -13,13 +13,10 @@ class GetPlaylist(object):
         browser.get('http://www.billboard.com/charts/rock-songs')
         time.sleep(5)
 
-        x=0
-        while (x<5):
-            title = browser.find_element_by_xpath('.//raw[1]/div[1]/div[4]/h2').text
-            artista = browser.find_element_by_xpath('.//raw[1]/div[1]/div[4]/h3/a').text
-            print title
-            print artista
-            x=x+1
+
+        title = browser.find_element_by_xpath('.//article[contains(@class,"chart-raw")]/div[contains(@class,"raw-title")]/h2').text
+        print title
+
 
 
 #mod
